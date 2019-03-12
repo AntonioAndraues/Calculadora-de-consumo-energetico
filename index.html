@@ -117,24 +117,19 @@
                                     <label for="pergunta_17">Quantos quilômetros você anda de uber/carona por dia?</label>
                                     <input type="number" value="0" name="pergunta_17" id="pergunta_17" />
                                 </div>
-                                <div class="label-flex">
-                                        <label for="fogao">Selecione o gás do seu fogão</label>
 
-                                    </div>
-                                <div class="select-list2">
-                                        <select name="fogao" id="fogao">
-                                            <option value="0">gás natural</option>
-                                            <option value="1">butijao</option>
-                                        </select>
-                                    </div>
 
                                 <div class="form-input">
-                                    <label for="pergunta_18">Quantas refeições você cozinha por semana?</label>
+                                    <label for="pergunta_18">Quantos botijões de gás você usa por ano?</label>
                                     <input type="number" value="0" name="pergunta_18" id="pergunta_18" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="pergunta_19">Qual a sua conta mensal de gás encanado, em Litros?</label>
+                                    <input type="number" value="0" name="pergunta_19" id="pergunta_19" />
                                 </div>
                             </div>
                         </div>
-                      
+
                         <div class="form-submit">
                             <input type="button" value="Calcular" class="submit" id="submit" name="submit" onclick="myFunction()" value="calculate">
                             <input type="submit" value="Resetar" class="submit" id="reset" name="reset" />
@@ -154,11 +149,7 @@
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    function addKmCarro(){
-        var list = document.createElement('table');
 
-
-    }
     function myFunction() {
       //eletricos
 
@@ -171,82 +162,43 @@
 
         switch (i) {
           case 1:
-<<<<<<< HEAD
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 1.5);
             break;
           case 2:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 3.5) ;
             break;
           case 3:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.1);
             break;
           case 4:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.3) ;
             break;
           case 5:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.015);
             break;
           case 6:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.2) ;
             break;
           case 7:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 1.3);
             break;
           case 8:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.18) ;
             break;
           case 9:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 1.5);
             break;
           case 10:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 1) ;
             break;
           case 11:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 3.5);
             break;
           case 12:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.06 );
             break;
           case 13:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
-=======
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 2:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
-            break;
-          case 3:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 4:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
-            break;
-          case 5:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 6:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
-            break;
-          case 7:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 8:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
-            break;
-          case 9:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 10:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
-            break;
-          case 11:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
-            break;
-          case 12:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i );
-            break;
-          case 13:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * 0.023) ;
             break;
           case 14:
 
@@ -281,9 +233,11 @@
 
             break;
           case 16:
-            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
+            soma_c02 += parseFloat(document.getElementById("pergunta_16").value * 22.3);
+            break;
 
->>>>>>> d1fe8696a9354fa0e2d702d9aa20a4b3b1a6c768
+          case 17:
+            soma_c02 += parseFloat(document.getElementById("pergunta_17").value * 0.136/2);
             break;
 
           default:
@@ -291,16 +245,21 @@
 
       }
 
-      soma_c02 += soma * 1.5;
+      soma_c02 += soma * 0.11 * 365;
 
+      //botijao
+      soma_c02 += parseFloat(document.getElementById("pergunta_18").value * 39.442);
+
+      //gas encanado
+      soma_c02 += parseFloat(document.getElementById("pergunta_19").value * 2.11);
       // for(i = 1 ; i <= 17 ; i++){
       //   soma += parseFloat(document.getElementById("pergunta_" + i).value);
       //   // alert(soma +"pergunta_" + i );
       //
       // }
 
-        alert(soma_c02);
-        var marginSlider = document.getElementById('slider-margin');
+        alert("O seu consumo de c02 anual é de:"+soma_c02.toFixed(3) + "kg");
+        // var marginSlider = document.getElementById('slider-margin');
         // marginSlider.setAttribute('start', soma);
 
         console.log(soma_c02);
@@ -311,41 +270,41 @@
 
 
 
-        if(marginSlider.noUiSlider == null){
-          noUiSlider.create(marginSlider, {
-              start: [soma_c02],
-              step: 1,
-              connect: [false, false],
-              tooltips: [true],
-              range: {
-                  'min': 0.0,
-                  'max': 50.0
-              },
-              format: wNumb({
-                  decimals: 1,
-                  thousand: ',',
-
-              })
-      });
-        }else{
-          marginSlider.noUiSlider.destroy();
-
-              noUiSlider.create(marginSlider, {
-                  start: [soma_c02],
-                  step: 1,
-                  connect: [false, false],
-                  tooltips: [true],
-                  range: {
-                      'min': 0.0,
-                      'max': 50.0
-                  },
-                  format: wNumb({
-                      decimals: 2,
-                      thousand: ',',
-
-                  })
-          });
-        }
+      //   if(marginSlider.noUiSlider == null){
+      //     noUiSlider.create(marginSlider, {
+      //         start: [soma_c02],
+      //         step: 1,
+      //         connect: [false, false],
+      //         tooltips: [true],
+      //         range: {
+      //             'min': 0.0,
+      //             'max': 50.0
+      //         },
+      //         format: wNumb({
+      //             decimals: 1,
+      //             thousand: ',',
+      //
+      //         })
+      // });
+      //   }else{
+      //     marginSlider.noUiSlider.destroy();
+      //
+      //         noUiSlider.create(marginSlider, {
+      //             start: [soma_c02],
+      //             step: 1,
+      //             connect: [false, false],
+      //             tooltips: [true],
+      //             range: {
+      //                 'min': 0.0,
+      //                 'max': 50.0
+      //             },
+      //             format: wNumb({
+      //                 decimals: 2,
+      //                 thousand: ',',
+      //
+      //             })
+      //     });
+      //   }
         // marginSlider.noUiSlider.destroy();
 
 

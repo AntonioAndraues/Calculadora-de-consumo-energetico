@@ -1,15 +1,6 @@
 (function($) {
 
 
-  
-  function myFunction() {
-    var x = document.getElementById("pergunta_1").value;
-    console.log(x);
-    document.getElementById("demo").innerHTML = x;
-  }
-
-  var marginSlider = document.getElementById('slider-margin');
-  marginSlider.setAttribute('disabled', true);
 
   $('#reset').on('click', function(){
       $('#register-form').reset();
