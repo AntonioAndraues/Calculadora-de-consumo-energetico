@@ -94,21 +94,28 @@
                                         <label for="pergunta_14">Motor do carro</label>
                                     </div>
                                     <div class="select-list">
-                                        <select name="pergunta_14" id="pergunta_14">
+                                        <select name="pergunta_14" id="pergunta_14" >
                                             <option id="p6_diariamente"value="0">Não tenho carro</option>
-                                            <option value="1">1.0</option>
-                                            <option value="1.6">1.6</option>
-                                            <option value="2.0">2.0 ou mais</option>
+                                            <option value="1">1.0 á álcool</option>
+                                            <option value="1.6">1.6 á álcool</option>
+                                            <option value="2.0">2.0+ á álcool</option>
+                                            <option value="1">1.0 á gasolina</option>
+                                            <option value="1.6">1.6 á gasolina</option>
+                                            <option value="2.0">2.0+ á gasolina</option>
                                         </select>
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="pergunta_15">Quantos quilômetros você anda de carro por dia?</label>
+                                        <input type="number" value="0" name="pergunta_15" id="pergunta_15" />
                                     </div>
                                 </div>
                                 <div class="form-select">
                                     <div class="label-flex">
-                                        <label for="pergunta_15">Uso do transporte coletivo</label>
+                                        <label for="pergunta_16">Uso do transporte coletivo</label>
 
                                     </div>
                                     <div class="select-list2">
-                                        <select name="pergunta_15" id="pergunta_15">
+                                        <select name="pergunta_16" id="pergunta_16">
                                             <option value="0">Nunca</option>
                                             <option value="1">1 vez por semana</option>
                                             <option value="3">duas a tres vezes por semana</option>
@@ -118,11 +125,11 @@
                                 </div>
                                 <div class="form-select">
                                         <div class="label-flex">
-                                            <label for="pergunta_16">Uso do Uber/Carona</label>
+                                            <label for="pergunta_17">Uso do Uber/Carona</label>
 
                                         </div>
                                         <div class="select-list2">
-                                            <select name="pergunta_16" id="pergunta_16">
+                                            <select name="pergunta_17" id="pergunta_17">
                                                 <option value="0">Nunca</option>
                                                 <option value="1">1 vez por semana</option>
                                                 <option value="3">duas a tres vezes por semana</option>
@@ -142,8 +149,8 @@
                                     </div>
 
                                 <div class="form-input">
-                                    <label for="pergunta_17">Quantas refeicoes por semana</label>
-                                    <input type="number" value="0" name="pergunta_17" id="pergunta_17" />
+                                    <label for="pergunta_18">Quantas refeicoes por semana</label>
+                                    <input type="number" value="0" name="pergunta_18" id="pergunta_18" />
                                 </div>
                             </div>
                         </div>
@@ -173,32 +180,71 @@
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+    function addKmCarro(){
+        var list = document.createElement('table');
+
+
+    }
     function myFunction() {
       //eletricos
-      var x1 = document.getElementById("pergunta_1").value;
-      var x2 = document.getElementById("pergunta_2").value;
-      var x3 = document.getElementById("pergunta_3").value;
-      var x4 = document.getElementById("pergunta_4").value;
-      var x5 = document.getElementById("pergunta_5").value;
-      var x6 = document.getElementById("pergunta_6").value;
-      var x7 = document.getElementById("pergunta_7").value;
-      var x8 = document.getElementById("pergunta_8").value;
-      var x9 = document.getElementById("pergunta_9").value;
-      var x10 = document.getElementById("pergunta_10").value;
-      var x11 = document.getElementById("pergunta_11").value;
-      var x12 = document.getElementById("pergunta_12").value;
-      var x13 = document.getElementById("pergunta_13").value;
-      var x14 = document.getElementById("pergunta_14").value;
-      var x15 = document.getElementById("pergunta_15").value;
-      var x16 = document.getElementById("pergunta_16").value;
-      var x17 = document.getElementById("pergunta_17").value;
+
 
       var soma = 0;
       for(i = 1 ; i <= 17 ; i++){
         soma += parseInt(document.getElementById("pergunta_" + i).value);
         // alert(soma +"pergunta_" + i );
 
+        switch (i) {
+          case 1:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 2:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 3:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 4:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 5:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 6:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 7:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 8:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 9:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 10:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 11:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i;
+            break;
+          case 12:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+          case 13:
+            soma += parseInt(document.getElementById("pergunta_" + i).value) * i ;
+            break;
+
+          default:
+        }
+
       }
+
+      // for(i = 1 ; i <= 17 ; i++){
+      //   soma += parseInt(document.getElementById("pergunta_" + i).value);
+      //   // alert(soma +"pergunta_" + i );
+      //
+      // }
 
 
         var marginSlider = document.getElementById('slider-margin');
