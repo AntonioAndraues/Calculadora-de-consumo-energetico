@@ -91,54 +91,34 @@
                                 <h1>Transporte</h1>
                                 <div class="form-select">
                                     <div class="label-flex">
-                                        <label for="pergunta_14">Motor do carro</label>
+                                        <label for="pergunta_14">Selecione motor do seu carro</label>
                                     </div>
                                     <div class="select-list">
                                         <select name="pergunta_14" id="pergunta_14" >
                                             <option id="p6_diariamente"value="0">Não tenho carro</option>
                                             <option value="1">1.0 á álcool</option>
-                                            <option value="1.6">1.6 á álcool</option>
-                                            <option value="2.0">2.0+ á álcool</option>
-                                            <option value="1">1.0 á gasolina</option>
-                                            <option value="1.6">1.6 á gasolina</option>
-                                            <option value="2.0">2.0+ á gasolina</option>
+                                            <option value="2">1.6 á álcool</option>
+                                            <option value="3">2.0+ á álcool</option>
+                                            <option value="4">1.0 á gasolina</option>
+                                            <option value="5">1.6 á gasolina</option>
+                                            <option value="6">2.0+ á gasolina</option>
                                         </select>
                                     </div>
                                     <div class="form-input">
-                                        <label for="pergunta_15">Quantos quilômetros você anda de carro por dia?</label>
+                                        <label for="pergunta_15">Quantos quilômetros você anda com seu carro por dia?</label>
                                         <input type="number" value="0" name="pergunta_15" id="pergunta_15" />
                                     </div>
                                 </div>
-                                <div class="form-select">
-                                    <div class="label-flex">
-                                        <label for="pergunta_16">Uso do transporte coletivo</label>
-
-                                    </div>
-                                    <div class="select-list2">
-                                        <select name="pergunta_16" id="pergunta_16">
-                                            <option value="0">Nunca</option>
-                                            <option value="1">1 vez por semana</option>
-                                            <option value="3">duas a tres vezes por semana</option>
-                                            <option id="p7_diariamente"value="6">diariamente</option>
-                                        </select>
-                                    </div>
+                                <div class="form-input">
+                                    <label for="pergunta_16">Quantos quilômetros você anda de ônibus por dia?</label>
+                                    <input type="number" value="0" name="pergunta_16" id="pergunta_16" />
                                 </div>
-                                <div class="form-select">
-                                        <div class="label-flex">
-                                            <label for="pergunta_17">Uso do Uber/Carona</label>
-
-                                        </div>
-                                        <div class="select-list2">
-                                            <select name="pergunta_17" id="pergunta_17">
-                                                <option value="0">Nunca</option>
-                                                <option value="1">1 vez por semana</option>
-                                                <option value="3">duas a tres vezes por semana</option>
-                                                <option id="p7_diariamente"value="6">diariamente</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                <div class="form-input">
+                                    <label for="pergunta_17">Quantos quilômetros você anda de uber/carona por dia?</label>
+                                    <input type="number" value="0" name="pergunta_17" id="pergunta_17" />
+                                </div>
                                 <div class="label-flex">
-                                        <label for="fogao">fogão</label>
+                                        <label for="fogao">Selecione o gás do seu fogão</label>
 
                                     </div>
                                 <div class="select-list2">
@@ -149,18 +129,12 @@
                                     </div>
 
                                 <div class="form-input">
-                                    <label for="pergunta_18">Quantas refeicoes por semana</label>
+                                    <label for="pergunta_18">Quantas refeições você cozinha por semana?</label>
                                     <input type="number" value="0" name="pergunta_18" id="pergunta_18" />
                                 </div>
                             </div>
                         </div>
-                        <div class="equivalencia-co2">
-                            <label>Equivalencia Co2 (toneladas)</label>
-                            <div class="sliderCo2 ui-slider ui-slider-horizontal">
-                                <div id="slider-margin"></div>
-                                <span class="co2-value" id="value-lower"></span>
-                            </div>
-                        </div>
+                      
                         <div class="form-submit">
                             <input type="button" value="Calcular" class="submit" id="submit" name="submit" onclick="myFunction()" value="calculate">
                             <input type="submit" value="Resetar" class="submit" id="reset" name="reset" />
@@ -190,49 +164,86 @@
 
 
       var soma = 0;
+      var soma_c02 = 0;
       for(i = 1 ; i <= 17 ; i++){
-        soma += parseInt(document.getElementById("pergunta_" + i).value);
+
         // alert(soma +"pergunta_" + i );
 
         switch (i) {
           case 1:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 1.5  ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 2:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 3.5 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
             break;
           case 3:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.1;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 4:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.3 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
             break;
           case 5:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.015;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 6:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.2 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
             break;
           case 7:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 1.3;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 8:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.18 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
             break;
           case 9:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 1.5;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 10:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 1 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
             break;
           case 11:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 3.5;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i);
             break;
           case 12:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.06 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i );
             break;
           case 13:
-            soma += parseInt(document.getElementById("pergunta_" + i).value) * 0.023 ;
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
+            break;
+          case 14:
+
+            switch (parseFloat(document.getElementById("pergunta_" + i).value)) {
+              case 1:
+                soma_c02 += parseFloat( document.getElementById("pergunta_15").value * 0.135);
+                break;
+
+              case 2:
+                soma_c02 += parseFloat(document.getElementById("pergunta_15").value * 0.152);
+                break;
+
+              case 3:
+                soma_c02 += parseFloat(document.getElementById("pergunta_15").value * 0.206);
+                break;
+
+              case 4:
+                soma_c02 += parseFloat(document.getElementById("pergunta_15").value * 0.136);
+                break;
+
+              case 5:
+                soma_c02 += parseFloat(document.getElementById("pergunta_15").value * 0.174);
+                break;
+
+              case 6:
+                soma_c02 += parseFloat(document.getElementById("pergunta_15").value * 0.217);
+                break;
+
+              default:
+
+            }
+
+            break;
+          case 16:
+            soma += parseFloat(document.getElementById("pergunta_" + i).value * i) ;
+
             break;
 
           default:
@@ -240,17 +251,19 @@
 
       }
 
+      soma_c02 += soma * 1.5;
+
       // for(i = 1 ; i <= 17 ; i++){
-      //   soma += parseInt(document.getElementById("pergunta_" + i).value);
+      //   soma += parseFloat(document.getElementById("pergunta_" + i).value);
       //   // alert(soma +"pergunta_" + i );
       //
       // }
 
-
+        alert(soma_c02);
         var marginSlider = document.getElementById('slider-margin');
         // marginSlider.setAttribute('start', soma);
 
-        console.log(soma);
+        console.log(soma_c02);
         // var e = document.getElementById("pergunta_6");
         // var strUser = e.options[e.selectedIndex].value;
         // console.log(strUser);
@@ -260,36 +273,36 @@
 
         if(marginSlider.noUiSlider == null){
           noUiSlider.create(marginSlider, {
-              start: [soma],
+              start: [soma_c02],
               step: 1,
               connect: [false, false],
               tooltips: [true],
               range: {
-                  'min': 0,
-                  'max': 50
+                  'min': 0.0,
+                  'max': 50.0
               },
               format: wNumb({
-                  decimals: 0,
+                  decimals: 1,
                   thousand: ',',
-                  prefix: 'Co2  ',
+
               })
       });
         }else{
           marginSlider.noUiSlider.destroy();
 
               noUiSlider.create(marginSlider, {
-                  start: [soma],
+                  start: [soma_c02],
                   step: 1,
                   connect: [false, false],
                   tooltips: [true],
                   range: {
-                      'min': 0,
-                      'max': 50
+                      'min': 0.0,
+                      'max': 50.0
                   },
                   format: wNumb({
-                      decimals: 0,
+                      decimals: 2,
                       thousand: ',',
-                      prefix: 'Co2  ',
+
                   })
           });
         }
