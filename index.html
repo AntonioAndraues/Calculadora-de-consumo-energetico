@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Calculadora CO2</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -30,57 +30,55 @@
                     <form class="register-form" id="register-form" action="index.html">
                         <div class="form-row">
                             <div class="form-group">
-                                <h1>Quanto tempo você usa:</h1>
+                                <h1>Quantas horas por dia você usa:</h1>
                                 <div class="form-input">
                                     <label for="pergunta_1" >lava-loucas</label>
-                                    <input type="number" id="pergunta_1" value="0" min="0" max="100000">
-                                  
+                                    <input type="number" id="pergunta_1" value="0" min="0" max="24">
 
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_2" >ar condicionado</label>
-                                    <input type="number" name="pergunta_2" value="0" id="pergunta_2" min="0"  max="100000" />
+                                    <input type="number" name="pergunta_2" value="0" id="pergunta_2" min="0"  max="24" />
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_3" >ventilador</label>
-                                    <input type="number" name="pergunta_3" value="0" id="pergunta_3" min="0" max="100000" />
+                                    <input type="number" name="pergunta_3" value="0" id="pergunta_3" min="0" max="24" />
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_4" >geladeira</label>
-                                    <input type="number" name="pergunta_4" value="0" id="pergunta_4" min="0" max="100000"/>
+                                    <input type="number" name="pergunta_4" value="0" id="pergunta_4" min="0" max="24"/>
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_5" >video-games</label>
-                                    <input type="number" name="pergunta_5" value="0" id="pergunta_5" min="0" max="100000"/>
+                                    <input type="number" name="pergunta_5" value="0" id="pergunta_5" min="0" max="24"/>
                                 </div>
                                 <div class="form-input">
-                                    <label for="pergunta_6.0" >televisão</label>
-                                     <input type="number" name="pergunta_6.0" value="0" id="pergunta_6.0" min="0" max="100000"/>
-
+                                    <label for="pergunta_6" >Televisão</label>
+                                    <input type="number" name="pergunta_6" value="0" id="pergunta_6" min="0"  max="24" />
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_7" >microondas</label>
-                                    <input type="number" name="pergunta_7" value="0" id="pergunta_7" min="0"  max="100000" />
+                                    <input type="number" name="pergunta_7" value="0" id="pergunta_7" min="0"  max="24" />
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_8" >computador</label>
-                                    <input type="number" name="pergunta_8" value="0" id="pergunta_8" min="0" max="100000" />
+                                    <input type="number" name="pergunta_8" value="0" id="pergunta_8" min="0" max="24" />
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_9" >lavagem de roupa</label>
-                                    <input type="number" name="pergunta_9" value="0" id="pergunta_9" min="0" max="100000"/>
+                                    <input type="number" name="pergunta_9" value="0" id="pergunta_9" min="0" max="24"/>
                                 </div>
                                 <div class="form-input">
                                     <label for="pergunta_10" >ferro eletrico</label>
-                                    <input type="number" name="pergunta_10" value="0" id="pergunta_10" min="0" max="100000"/>
+                                    <input type="number" name="pergunta_10" value="0" id="pergunta_10" min="0" max="24"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                     <div class="form-input">
                                             <label for="pergunta_11" >chuveiro</label>
                                             <input type="number" id="pergunta_11" value="0" min="0" max="100000">
-                                          
-        
+
+
                                         </div>
                                         <div class="form-input">
                                             <label for="pergunta_12" >lampada incandescente</label>
@@ -107,7 +105,7 @@
                                 <div class="form-select">
                                     <div class="label-flex">
                                         <label for="pergunta_15">Uso do transporte coletivo</label>
-                                        
+
                                     </div>
                                     <div class="select-list2">
                                         <select name="pergunta_15" id="pergunta_15">
@@ -121,7 +119,7 @@
                                 <div class="form-select">
                                         <div class="label-flex">
                                             <label for="pergunta_16">Uso do Uber/Carona</label>
-                                            
+
                                         </div>
                                         <div class="select-list2">
                                             <select name="pergunta_16" id="pergunta_16">
@@ -134,7 +132,7 @@
                                     </div>
                                 <div class="label-flex">
                                         <label for="fogao">fogão</label>
-                                        
+
                                     </div>
                                 <div class="select-list2">
                                         <select name="fogao" id="fogao">
@@ -176,12 +174,37 @@
     <script src="js/main.js"></script>
     <script>
     function myFunction() {
-        var x = document.getElementById("pergunta_1").value;
+      //eletricos
+      var x1 = document.getElementById("pergunta_1").value;
+      var x2 = document.getElementById("pergunta_2").value;
+      var x3 = document.getElementById("pergunta_3").value;
+      var x4 = document.getElementById("pergunta_4").value;
+      var x5 = document.getElementById("pergunta_5").value;
+      var x6 = document.getElementById("pergunta_6").value;
+      var x7 = document.getElementById("pergunta_7").value;
+      var x8 = document.getElementById("pergunta_8").value;
+      var x9 = document.getElementById("pergunta_9").value;
+      var x10 = document.getElementById("pergunta_10").value;
+      var x11 = document.getElementById("pergunta_11").value;
+      var x12 = document.getElementById("pergunta_12").value;
+      var x13 = document.getElementById("pergunta_13").value;
+      var x14 = document.getElementById("pergunta_14").value;
+      var x15 = document.getElementById("pergunta_15").value;
+      var x16 = document.getElementById("pergunta_16").value;
+      var x17 = document.getElementById("pergunta_17").value;
+
+      var soma = 0;
+      for(i = 1 ; i <= 17 ; i++){
+        soma += parseInt(document.getElementById("pergunta_" + i).value);
+        // alert(soma +"pergunta_" + i );
+
+      }
+
 
         var marginSlider = document.getElementById('slider-margin');
-        marginSlider.setAttribute('start', x);
+        // marginSlider.setAttribute('start', soma);
 
-        console.log(x);
+        console.log(soma);
         // var e = document.getElementById("pergunta_6");
         // var strUser = e.options[e.selectedIndex].value;
         // console.log(strUser);
@@ -189,24 +212,51 @@
 
 
 
+        if(marginSlider.noUiSlider == null){
+          noUiSlider.create(marginSlider, {
+              start: [soma],
+              step: 1,
+              connect: [false, false],
+              tooltips: [true],
+              range: {
+                  'min': 0,
+                  'max': 50
+              },
+              format: wNumb({
+                  decimals: 0,
+                  thousand: ',',
+                  prefix: 'Co2  ',
+              })
+      });
+        }else{
+          marginSlider.noUiSlider.destroy();
 
-        noUiSlider.create(marginSlider, {
-            start: [x],
-            step: 1,
-            connect: [false, false],
-            tooltips: [true],
-            range: {
-                'min': 0,
-                'max': 50
-            },
-            format: wNumb({
-                decimals: 0,
-                thousand: ',',
-                prefix: 'Co2  ',
-            })
-    });
+              noUiSlider.create(marginSlider, {
+                  start: [soma],
+                  step: 1,
+                  connect: [false, false],
+                  tooltips: [true],
+                  range: {
+                      'min': 0,
+                      'max': 50
+                  },
+                  format: wNumb({
+                      decimals: 0,
+                      thousand: ',',
+                      prefix: 'Co2  ',
+                  })
+          });
+        }
+        // marginSlider.noUiSlider.destroy();
 
-        
+
+    // marginSlider.noUiSlider.updateOptions({
+    //     range: {
+    //         'min': 20,
+    //         'max': 50
+    //     }
+    // });
+
       }
     </script>
 
